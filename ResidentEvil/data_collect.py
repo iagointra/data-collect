@@ -35,7 +35,7 @@ def get_characters(url):
     else:
         soup = BeautifulSoup(resp.text, "html.parser")
         data = get_basic_info(soup)
-        data["Appearances"] = get_characters(soup)
+        data["Appearances"] = get_appearances(soup)
         return data
 
 def get_links():
